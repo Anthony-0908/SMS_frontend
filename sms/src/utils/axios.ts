@@ -6,8 +6,8 @@ import axios from "axios";
 
 
 const axiosServices = axios.create();
-
-axiosServices.defaults.baseURL = ''; //default base url
+axiosServices.defaults.withCredentials = true  
+axiosServices.defaults.baseURL = 'http://127.0.0.1:8000'; //default base url
 
 // interceptor for http
 axiosServices.interceptors.response.use(
